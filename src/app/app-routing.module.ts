@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GoogleMapsComponent } from './map/google-maps/google-maps.component';
 import { MapboxComponent } from './map/mapbox/mapbox.component';
 import { OpenLayersComponent } from './map/open-layers/open-layers.component';
+import { BingMapsComponent } from './map/bing-maps/bing-maps.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'open-layers',
     component: OpenLayersComponent
+  },
+  {
+    path: 'bing-maps',
+    component: BingMapsComponent
   }
 ];
 

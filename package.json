@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "angular-maps": "^6.0.1",
+    "bingmaps": "^2.0.3",
     "core-js": "^2.5.4",
     "firebase": "5.7.0",
     "mapbox-gl": "^0.52.0",

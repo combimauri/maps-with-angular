@@ -9,7 +9,6 @@ export const environment = {
     messagingSenderId: ''
   },
   googlemaps: '',
-  mapbox: {
-    accessToken: ''
-  }
+  mapbox: '',
+  bingmaps: ''
 };
