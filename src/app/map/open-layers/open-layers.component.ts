@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Map, View, Feature } from 'ol';
 import { OSM, Vector } from 'ol/source';
-import { fromLonLat } from 'ol/proj';
+import { fromLonLat, addCommon } from 'ol/proj';
 import TileLayer from 'ol/layer/Tile';
 import VectorLayer from 'ol/layer/Vector';
 import Point from 'ol/geom/Point';
@@ -18,14 +18,14 @@ export class OpenLayersComponent implements OnInit {
   map: Map;
 
   ngOnInit(): void {
+    addCommon();
+
     const marker = new Feature({
       geometry: new Point(fromLonLat([this.lng, this.lat]))
     });
-
     const markers = new Vector({
       features: [marker]
     });
-
     this.map = new Map({
       target: 'map',
       layers: [
