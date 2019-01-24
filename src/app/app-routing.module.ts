@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { GoogleMapsComponent } from './map/google-maps/google-maps.component';
 import { MapboxComponent } from './map/mapbox/mapbox.component';
+import { OpenLayersComponent } from './map/open-layers/open-layers.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'mapbox',
     component: MapboxComponent
+  },
+  {
+    path: 'open-layers',
+    component: OpenLayersComponent
   }
 ];
 

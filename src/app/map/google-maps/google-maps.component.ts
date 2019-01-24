@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class GoogleMapsComponent {
   lat = -17.393695;
   lng = -66.157126;
+  zoom = 17;
 }

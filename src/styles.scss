@@ -20,3 +20,11 @@ $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
 @import 'node_modules/materialize-css/sass/materialize';
+
+.ng-map {
+  height: calc(100vh - 56px);
+
+  @media only screen and (min-width: 601px) {
+    height: calc(100vh - 64px);
+  }
+}
