@@ -21,5 +21,18 @@ export class BingMapsComponent implements OnInit {
     this.iconInfo = {
       markerType: 0
     };
+
+    this.centerMapOnCurrentUserLocation();
+  }
+
+  centerMapOnCurrentUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+
+        this.options.center = { latitude: this.lat, longitude: this.lng };
+      });
+    }
   }
 }

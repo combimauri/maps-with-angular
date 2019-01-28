@@ -23,8 +23,23 @@ export class MapboxComponent implements OnInit {
     });
     this.map.addControl(new mapboxgl.NavigationControl());
 
-    const marker = new mapboxgl.Marker();
-    marker.setLngLat([this.lng, this.lat]);
-    marker.addTo(this.map);
+    this.centerMapOnCurrentUserLocation();
+  }
+
+  centerMapOnCurrentUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
+
+        this.map.flyTo({
+          center: [this.lng, this.lat]
+        });
+
+        const marker = new mapboxgl.Marker();
+        marker.setLngLat([this.lng, this.lat]);
+        marker.addTo(this.map);
+      });
+    }
   }
 }
